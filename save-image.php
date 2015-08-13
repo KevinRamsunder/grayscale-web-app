@@ -31,11 +31,9 @@ if ($uploadOk == false) {
 } else {
     if (move_uploaded_file($_FILES["picture"]["tmp_name"], $TARGETFILE)) {
         echo "The file " . basename($_FILES["picture"]["name"]) . " has been uploaded.<br>";
+        display_image($TARGETFILE);
     } else {
         echo "Sorry, there was an error uploading your image.";
     }
 }
-
-display_image($TARGETFILE);
-
 ?>
