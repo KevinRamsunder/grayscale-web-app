@@ -11,7 +11,6 @@ $(document).ready(function () {
 
            success: function(result) {
               if($.trim(result) != 'error') {
-                 alert(result);
                  $("#image1").attr('src', result);
                  $("#edit").click();
               } 
