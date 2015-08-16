@@ -2,9 +2,10 @@
 
 function display_image($image_url) {
     if (file_exists($image_url) == false) {
-        echo 'File ' . $image_url . ' not found!<br>';
+        return "error";
     } else {
-        echo '<img src="' . $image_url . '" width="500" height="200"/>';
+        // strip first dot to resolve correct path to directory
+        return substr($image_url, 1);
     }
 }
 

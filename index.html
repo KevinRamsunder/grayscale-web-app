@@ -1,13 +1,33 @@
 <html>
-    
-<head>
+
+<head> 
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Form action listener -->
+    <script type="text/javascript" src="js/htmlAction.js"></script>
+
+    <!-- Load Feather code -->
+    <script type="text/javascript" src="js/editor.js"></script>
+
+    <!-- Load Feather code -->
+    <script type="text/javascript" src="js/api.js"></script>            
 </head>
-    
+
 <body>
-    <form id="attachment" action="save-image.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="picture" id="uploadfile">
-        <input type="submit" name="submit" value="Upload Image">
-    </form>
-    
+    <center>
+        <!-- Form -->
+        <form id="attachment" method="post" enctype="multipart/form-data">
+            <input type="file" name="picture" id="uploadfile">
+            <input type="submit" name="submit" value="Upload Image">
+        </form> 
+
+        <!-- Image place holder -->
+        <img id='image1' src=''/>
+
+        <!-- Editor place holder -->
+        <p><input id="edit" hidden="true" type='image' onclick="return launchEditor('image1', $('#image1').prop('src'));" /></p>
+    </center>
 </body>
+
 </html>
