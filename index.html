@@ -1,33 +1,87 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 
-<head> 
-    <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<head>
 
-    <!-- Form action listener -->
-    <script type="text/javascript" src="js/htmlAction.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Grayscale Web App</title>
 
-    <!-- Load Feather code -->
-    <script type="text/javascript" src="js/editor.js"></script>
-
-    <!-- Load Feather code -->
-    <script type="text/javascript" src="js/api.js"></script>            
+<link rel="shortcut icon" href="./images/gt_favicon.ico" type="image/x-icon">
+<link href="css/bootstrap.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/buttons.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" media="screen" rel="stylesheet" type="text/css">
+<link id="header-switch" href="css/dark.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/astonish.css" media="screen" rel="stylesheet" type="text/css">
 </head>
+<body data-offset="62" data-spy="scroll" data-target=".navbar">
 
-<body>
-    <center>
-        <!-- Form -->
-        <form id="attachment" method="post" enctype="multipart/form-data">
-            <input type="file" name="picture" id="uploadfile">
-            <input type="submit" name="submit" value="Upload Image">
-        </form> 
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+      <i class="fa fa-bars fa-fw"></i>
+      </button>
+      <a class="navbar-brand weight-900" href="index.html"><img style="margin: 8px 0 0 0;" src="./images/logo.png" id="logo"></a>
+    </div>
 
-        <!-- Image place holder -->
-        <img id='image1' src=''/>
+    <div class="collapse navbar-collapse" id="main-menu">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a  href="index.html">Home</a></li>
+	   <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<i class="fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="about-colorblindness.html">About Color Blindness</a></li>
+          </ul>
+    </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-        <!-- Editor place holder -->
-        <p><input id="edit" hidden="true" type='image' onclick="return launchEditor('image1', $('#image1').prop('src'));" /></p>
-    </center>
+<div id="title-header">
+<div class="fullwidth-section">
+<div class="container">
+<div class="row" style="margin-bottom: 40px;">
+<div class="col-md-8 col-md-offset-2 text-center">
+<h1 class="weight-800 uppercase">Grayscale Web App</h1>
+<ol class="breadcrumb">
+  <li><a href="index.html">Select an image and click upload to get started.</a></li>
+</ol>
+<hr/>
+</div>
+</div>
+
+<center>
+    <!-- Form for uploading image -->
+    <form id="attachment" method="post" enctype="multipart/form-data">
+      <div class="btn-group">
+        <input class="btn btn-default" type="file" name="picture" id="uploadfile">
+        <input class="btn btn-default" type="submit" name="submit" value="Upload Image" style="padding-bottom:15px">
+      </div>
+    </form> 
+
+    <!-- Image place holder -->
+    <img id='image1' src=''/>
+</div>
+
+<!-- Editor place holder -->
+    <p><input id="edit" hidden="true" type='image' onclick="return launchEditor('image1', $('#image1').prop('src'));" /></p>
+</center>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- Form action listener -->
+<script type="text/javascript" src="js/htmlAction.js"></script>
+
+<!-- Load Feather code -->
+<script type="text/javascript" src="js/editor.js"></script>
+
+<!-- Load Feather code -->
+<script type="text/javascript" src="js/api.js"></script>  
+
 </body>
-
 </html>
