@@ -13,7 +13,9 @@ $(document).ready(function () {
               if($.trim(result) != 'error') {
                  $("#image1").attr('src', result);
                  $("#edit").click();
-              } 
+              } else {
+                alert(result);
+              }
            }
         });
     });
