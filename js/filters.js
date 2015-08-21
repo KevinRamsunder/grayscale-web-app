@@ -15,5 +15,7 @@
 "displayName":"Classic",
 "displayDescription":"Enjoy the awesome look and feel of the original Aviary effects with this pack of 12 classics.",
 "minVersion":"1.0.0",
+
+// TODO: add other filters here such as red/green/blue light filters
 "items":[{"displayName":"Grayscale","identifier":"bw","minVersion":"1.0.0","processors":
 [{"name":"colorMatrixTransform","parameters":{"operations":[{"operation":"saturation","value":0}]}}]}]});
